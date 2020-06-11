@@ -1,58 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		
-	</body>
-	<script>
-		let data = [
-			{id : 1 , name : 1 , pid : 0},
-			{id : 2 , name : 2 , pid : 0},
-			{id : 3 , name : 3 , pid : 0},
-			{id : 1.1 , name : 1.1 , pid : 1},
-			{id : 2.1 , name : 2.1 , pid : 2},
-			{id : 3.1 , name : 3.1 , pid : 3},
-			{id : 1.2 , name : 1.2 , pid : 1},
-			{id : 2.2 , name : 2.2 , pid : 2},
-			{id : 3.2 , name : 3.2 , pid : 3},
-			{id : 1.3 , name : 1.3 , pid : 1.1}
-		];
-		
-		let tree = [];
-		let parentNodes = data.filter(item => item.pid === 0);
-		let childrenNodes = data.filter(item => item.pid != 0);
-		structureTreeNodes();
-		
-		function structureTreeNodes(){
-			for(let i = 0 , len = parentNodes.length; i < len; i++ ){
-				let node = {};
-				node.id = parentNodes[i].id;
-				node.name = parentNodes[i].name;
-				node.children = findChildren(parentNodes[i].id);
-				tree.push(node);
-			}
-		}
-		
-		console.log(tree)
-		function findChildren(pid){
-			let children = [];
-			for(let i = 0 , len = childrenNodes.length; i < len; i++){
-				if(childrenNodes[i].pid == pid){
-					let node = {};
-					node.id = childrenNodes[i].id;
-					node.name = childrenNodes[i].name;
-					node.children = findChildren(childrenNodes[i].id);
-					children.push(node);
-				}else{
-					continue;
-				}
-			}
-			return children;
-		}
-		
-		
-	</script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>front-end-project</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
