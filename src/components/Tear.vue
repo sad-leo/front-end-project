@@ -1,12 +1,12 @@
 <template>
   <!-- 使用clip-path 实现撕裂特效 -->
   <!-- https://www.html.cn/tool/css-clip-path/ -->
-  <div class="container">
+  <div class="container-clip">
     <section>
       <div class="side" id="side1"></div>
       <div class="side" id="side2"></div>
     </section>
-    <div class="content">
+    <div class="content-clip">
         <h2>使用CSS3的clip-path(裁剪路径)实现剪贴区域的显示以及实例实现图片渐变</h2>
         <p>clip-path属性可以防止部分元素通过定义的剪切区域来显示，仅通过显示的特殊区域。<br>剪切区域是被URL定义的路径代替行内或者外部svg，或者定义路线的方法例如circle().。clip-path属性代替了现在已经弃用的剪切 clip属性。</p>
         <p>clip-path属性可以防止部分元素通过定义的剪切区域来显示，仅通过显示的特殊区域。<br>剪切区域是被URL定义的路径代替行内或者外部svg，或者定义路线的方法例如circle().。clip-path属性代替了现在已经弃用的剪切 clip属性。</p>
@@ -110,7 +110,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-.container {
+.container-clip {
   min-height: 200vh;
 }
 section {
@@ -131,7 +131,8 @@ section .side {
   background: url("../assets/timg.jpg");
   background-size: cover;
 }
-.content{
+.content-clip{
+    padding: 100px;
     padding-top: 100vh;
 }
 
