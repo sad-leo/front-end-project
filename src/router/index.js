@@ -4,11 +4,17 @@ import HelloWorld from '@/components/HelloWorld'
 import NeonLights from '@/components/NeonLights'
 import Tear from '@/components/Tear'
 import LiquidFlow from '@/components/LiquidFlow'
+import TextLoading from '@/components/TextLoading'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+  mode: 'history',
+  routes: [{
+      path: '/testloading',
+      name: 'TextLoading',
+      component: TextLoading
+    },
     {
       path: '/hello',
       name: 'HelloWorld',
